@@ -1,0 +1,6 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "Footprint") (type "KiCad") (uri "${KIPRJMOD}/Libraries/Footprint.pretty") (options "") (descr ""))
+	(lib (name "PCBLIB_COMM-SMD_16P-L22.5-W18.0-P2.54-TL_2026-09-18") (type "EasyEDA / JLCEDA Std") (uri "${KIPRJMOD}/Libraries/Footprint.pretty/PCBLIB_COMM-SMD_16P-L22.5-W18.0-P2.54-TL_2026-09-18.json") (options "") (descr ""))
+	(lib (name "PCBLIB_SW-TH_KH-SS12F23-G6_2026-09-20") (type "EasyEDA / JLCEDA Std") (uri "${KIPRJMOD}/Libraries/Footprint.pretty/PCBLIB_SW-TH_KH-SS12F23-G6_2026-09-20.json") (options "") (descr ""))
+)

@@ -1,0 +1,60 @@
+# .gitignore cho project KiCad 10 - Swarm Robot Hardware
+# Chi dang len: file thiet ke, thu vien rieng, file san xuat, tai lieu.
+
+# ---------------------------------------------------------------
+# KiCad: file tam, sao luu, cai dat rieng tung may
+# ---------------------------------------------------------------
+# Thu muc sao luu tu dong (Preferences -> Common -> Project Backup)
+*-backups/
+# Cai dat hien thi rieng tung nguoi (layer dang an, zoom...)
+*.kicad_prl
+# File khoa khi dang mo project
+*.lck
+~*.lck
+# Cache footprint, KiCad tu tao lai
+fp-info-cache
+# File tu dong luu khi KiCad bi tat dot ngot
+_autosave-*
+\#auto_saved_files#
+# Sao luu kieu cu
+*.bak
+*-bak
+*-save.pro
+*-save.kicad_pcb
+# Bao cao cua plugin kiem tra 3D (chua duong dan rieng tren may)
+*_missing3Dmodels.txt
+# Bao cao DRC/ERC xuat ra
+*-drc.rpt
+*-erc.rpt
+*.rpt
+
+# ---------------------------------------------------------------
+# File xuat san xuat: dinh kem vao GitHub Release, khong commit
+# (BOM/CPL trong production/ van duoc commit)
+# ---------------------------------------------------------------
+*.zip
+gerber/
+gerbers/
+production/*.gbr
+production/*.drl
+
+# ---------------------------------------------------------------
+# Khong dang len repo
+# ---------------------------------------------------------------
+# Lich su tu luu cua extension VS Code Local History
+.history/
+# File tam cua Claude Code
+.claude/
+# Bao cao do an
+Do_an.*
+# Ban thu nghiem bo tri linh kien, khong phai ban chinh
+docs/ideal_layout/
+
+# ---------------------------------------------------------------
+# He dieu hanh, editor
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
