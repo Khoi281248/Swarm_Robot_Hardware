@@ -9,11 +9,22 @@ Một mạch duy nhất gồm hai vi điều khiển:
 > 🔗 Firmware: [Swarm_Robot_Firmware](https://github.com/Khoi281248/Swarm_Robot_Firmware)
 > 📄 Sơ đồ nguyên lý dạng PDF (xem không cần KiCad): [Swarm_robot_project.pdf](Swarm_robot_project.pdf)
 
-| Mặt trên | Mặt dưới |
+![PCB 3D](docs/pcb_3d_iso.png)
+
+| Mặt trên (3D) | Mặt dưới (3D) |
 |---|---|
 | ![PCB mặt trên](docs/pcb_layout_top.png) | ![PCB mặt dưới](docs/pcb_layout_bottom.png) |
 
-*Ảnh render 3D từ KiCad, có thể chưa cập nhật theo bản mới nhất.*
+*Ảnh render 3D từ KiCad 10. Linh kiện xuyên lỗ J1–J4, SW3, SW5 là DNP (tự hàn) nên không hiện model 3D.*
+
+<details>
+<summary>Đi dây lớp đồng (bấm để xem)</summary>
+
+| Lớp trên F.Cu | Lớp dưới B.Cu (nhìn từ dưới) |
+|---|---|
+| ![Đi dây lớp trên](docs/pcb_routing_top.png) | ![Đi dây lớp dưới](docs/pcb_routing_bottom.png) |
+
+</details>
 
 ## Thông số mạch
 
@@ -23,7 +34,7 @@ Một mạch duy nhất gồm hai vi điều khiển:
 | Số lớp | 2 lớp (F.Cu tín hiệu, B.Cu nguồn/GND), dày 1,6 mm |
 | Lỗ bắt vít | 4 lỗ M2 (H1–H4) |
 | Nguồn | Pin LiPo 1S (2000 mAh), sạc qua USB-C |
-| Linh kiện | 87 footprint, lắp ráp SMT tại JLCPCB |
+| Linh kiện | 87 footprint: 77 linh kiện SMD lắp tại JLCPCB, 6 linh kiện xuyên lỗ tự hàn (J1–J4, SW3, SW5), 4 lỗ vít |
 
 ## Sơ đồ khối
 
@@ -149,8 +160,9 @@ Bản PDF lưu trong thư mục [`Datasheet/`](Datasheet/) để tra cứu nhanh
 |---|---|
 | Sơ đồ nguyên lý | ✅ Xong |
 | Bố trí linh kiện | ✅ Xong |
-| Đi dây (routing) | 🔄 Đang làm |
-| Kiểm tra DRC, xuất Gerber | ⏳ Chưa làm |
+| Đi dây (routing) | ✅ Xong (2 lớp, 135 via, 0 chân chưa nối) |
+| Kiểm tra DRC | ✅ Không còn lỗi, schematic và PCB đồng bộ |
+| Xuất Gerber, BOM, CPL | ✅ Xong (Gerber đính kèm ở mục Releases) |
 | Đặt mạch JLCPCB, lắp ráp, test | ⏳ Chưa làm |
 
 ## Giấy phép
